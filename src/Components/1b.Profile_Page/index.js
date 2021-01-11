@@ -107,11 +107,11 @@ function Profile() {
       <img className='profile-pic' src={user?.picture} alt={user?.name} />
       {user?.given_name ? (
         <H2
-          text={`Hi ${user?.given_name}, Welcome to your Profile Page, please add your Myers-Briggs and Start Date`}
+          text={`Hi ${user?.given_name}, welcome to your Profile Page. Please add your Myers-Briggs and Bootcamp Start Date`}
         />
       ) : (
         <H2
-          text={`Hi, Welcome to your Profile Page, please add your Myers-Briggs and Start Date`}
+          text={`Hi, welcome to your Profile Page. Please add your Myers-Briggs and Bootcamp Start Date`}
         />
       )}
       <form /*className={classes.root}*/ noValidate autoComplete='off'>
