@@ -36,9 +36,9 @@ function Timeline() {
         }
         return false;
       });
-      setcongratsMessage(res[0].message);
+      setcongratsMessage(res.length > 0 ? res[0].message : '');
     }
-  }, [currentWeek, congratsMessage]);
+  }, [currentWeek, congratsMessage, congratsData]);
 
   //Dark / Light Theme
   const theme = useContext(ThemeContext);
