@@ -81,10 +81,13 @@ body {
 
 .timeline-container {
   padding-bottom: 150px;
+  margin: auto;
+  max-width: 35rem;
 }
 
-.container {
+div .container {
   padding: 10%;
+  /* max-width: 35rem; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -100,6 +103,8 @@ body {
   flex-direction: column;
   align-self: center;
   justify-content: center;
+  margin: auto;
+  max-width: 100rem;
 }
 
 /* Emma workign on Buttons */
@@ -109,3 +114,16 @@ body {
 .MuiButton-outlinedPrimary {
   margin: 3em;
 } */
+
+button {
+  max-width: 10rem;
+}
+
+img {
+  max-width: 7rem;
+}
+
+.journal-cards {
+  max-width: 35rem;
+  margin: auto;
+}

@@ -323,7 +323,7 @@ function JournalView() {
             <MenuItem value={'Mood low to high'}>Mood: 😢 to 😍</MenuItem>
           </Select>
         </FormControl>
-        <div className='jouranal-cards'>
+        <div className='journal-cards'>
           {journalDisplay
             .filter((x) => !showFavorites || x.favorite === true)
             .sort((a, b) => {

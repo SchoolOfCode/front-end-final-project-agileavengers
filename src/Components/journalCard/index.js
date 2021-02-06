@@ -20,7 +20,7 @@ import { ThemeContext } from '../../ThemeContext';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    maxWidth: '95%',
     marginTop: '1em',
   },
   date: {
@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
   },
   media: {
+    // width: '100%',
     margin: '1em',
   },
   journalactions: {

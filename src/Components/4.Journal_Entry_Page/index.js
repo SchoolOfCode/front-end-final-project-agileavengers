@@ -223,141 +223,145 @@ export default function JournalEntry({ emotion }) {
             draggable
             pauseOnHover
           />
-          <H1 text={`Hi ${userData?.name}!`} />
-          <H2 text={`What have you been up to today?`} />
-          {emotion && (
-            <h2 style={{ fontSize: '5em' }}>{chosenEmotion[0].emotion}</h2>
-          )}
-          <br></br>
-          <div className='container' id='journal-entry'>
-            <TextField
-              id='outlined-multiline-static'
-              label='Journal Entry'
-              fullWidth='true'
-              multiline
-              rows={4}
-              defaultValue='Default Value'
-              variant='outlined'
-              color={muiTheme(theme)}
-              onChange={(event) => {
-                const { value } = event.target;
-                setText(value);
-              }}
-              value={text}
-              className='form-input'
-              placeholder={
-                PlaceholderQs[Math.floor(Math.random() * PlaceholderQs.length)]
-              }
-            />
-            <div className='file-entry'>
-              <input
-                name='image'
-                accept='image/*'
-                //className={classes.input}
-                style={{ display: 'none', overFlow: 'hidden' }}
-                id='image'
-                multiple
-                type='file'
-                onChange={handleImageInputChange}
-                value={imgUpload}
-              />
-              <label htmlFor={'image'}>
-              {/* <button style={{padding: '0.7em'}}> */}
-                <PhotoRoundedIcon fontSize='large' />
-                {/* </button> */}
-              </label>
-              <input
-                id='video'
-                type='file'
-                name='video'
-                accept='video/*'
-                onChange={handleVideoInputChange}
-                value={vidUpload}
-                style={{ display: 'none', overFlow: 'hidden' }}
-              />
-              <label htmlFor={'video'}>
-              {/* <button style={{padding: '0.7em'}}> */}
-                <VideocamRoundedIcon fontSize='large' />
-                {/* </button> */}
-              </label>
-              <input
-                id='audio'
-                type='file'
-                //name='audio'
-                accept='audio/*'
-                onChange={handleAudioInputChange}
-                value={audioUpload}
-                style={{ display: 'none', overFlow: 'hidden' }}
-              />
-              <label htmlFor={'audio'}>
-              {/* <button style={{padding: '0.7em'}}> */}
-                <AudiotrackRoundedIcon fontSize='large' />
-                {/* </button> */}
-              </label>
-            </div>
-          </div>
-          <br></br>
-          {previewImgSource && (
-            <img
-              src={previewImgSource}
-              alt='chosenImg'
-              style={{
-                width: '70%',
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}
-            />
-          )}
-          <br></br>
-          {previewVidSource && (
-            <video
-              src={previewVidSource}
-              alt='chosenVideo'
-              style={{
-                width: '70%',
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}
-              controls
-            />
-          )}
-          {previewAudioSource && (
-            <ReactAudioPlayer
-              src={previewAudioSource}
-              alt='chosenAudio'
-              style={{
-                width: '70%',
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}
-              autoplay
-              controls
-            />
-          )}
-          <div width='50%' margin='2em'>
-            <Button
-              className='btn'
-              onClick={handleSubmitFile}
-              variant='outlined'
-              color={muiTheme(theme)}
-            >
-              Submit
-            </Button>
-            <br></br>
-            <br></br>
+          <div className='entry-container'>
+            <H1 text={`Hi ${userData?.name}!`} />
+            <H2 text={`What have you been up to today?`} />
             {emotion && (
-              <Button
-                onClick={() => handleClick(chosenEmotion)}
+              <h2 style={{ fontSize: '5em' }}>{chosenEmotion[0].emotion}</h2>
+            )}
+            <br></br>
+            <div className='container' id='journal-entry'>
+              <TextField
+                id='outlined-multiline-static'
+                label='Journal Entry'
+                fullWidth='true'
+                multiline
+                rows={4}
+                defaultValue='Default Value'
                 variant='outlined'
+                color={muiTheme(theme)}
+                onChange={(event) => {
+                  const { value } = event.target;
+                  setText(value);
+                }}
+                value={text}
+                className='form-input'
+                placeholder={
+                  PlaceholderQs[
+                    Math.floor(Math.random() * PlaceholderQs.length)
+                  ]
+                }
+              />
+              <div className='file-entry'>
+                <input
+                  name='image'
+                  accept='image/*'
+                  //className={classes.input}
+                  style={{ display: 'none', overFlow: 'hidden' }}
+                  id='image'
+                  multiple
+                  type='file'
+                  onChange={handleImageInputChange}
+                  value={imgUpload}
+                />
+                <label htmlFor={'image'}>
+                  {/* <button style={{padding: '0.7em'}}> */}
+                  <PhotoRoundedIcon fontSize='large' />
+                  {/* </button> */}
+                </label>
+                <input
+                  id='video'
+                  type='file'
+                  name='video'
+                  accept='video/*'
+                  onChange={handleVideoInputChange}
+                  value={vidUpload}
+                  style={{ display: 'none', overFlow: 'hidden' }}
+                />
+                <label htmlFor={'video'}>
+                  {/* <button style={{padding: '0.7em'}}> */}
+                  <VideocamRoundedIcon fontSize='large' />
+                  {/* </button> */}
+                </label>
+                <input
+                  id='audio'
+                  type='file'
+                  //name='audio'
+                  accept='audio/*'
+                  onChange={handleAudioInputChange}
+                  value={audioUpload}
+                  style={{ display: 'none', overFlow: 'hidden' }}
+                />
+                <label htmlFor={'audio'}>
+                  {/* <button style={{padding: '0.7em'}}> */}
+                  <AudiotrackRoundedIcon fontSize='large' />
+                  {/* </button> */}
+                </label>
+              </div>
+            </div>
+            <br></br>
+            {previewImgSource && (
+              <img
+                src={previewImgSource}
+                alt='chosenImg'
+                style={{
+                  width: '70%',
+                  display: 'block',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}
+              />
+            )}
+            <br></br>
+            {previewVidSource && (
+              <video
+                src={previewVidSource}
+                alt='chosenVideo'
+                style={{
+                  width: '70%',
+                  display: 'block',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}
+                controls
+              />
+            )}
+            {previewAudioSource && (
+              <ReactAudioPlayer
+                src={previewAudioSource}
+                alt='chosenAudio'
+                style={{
+                  width: '70%',
+                  display: 'block',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}
+                autoplay
+                controls
+              />
+            )}
+            <div width='50%' margin='2em'>
+              <Button
                 className='btn'
+                onClick={handleSubmitFile}
+                variant='outlined'
                 color={muiTheme(theme)}
               >
-                Skip
+                Submit
               </Button>
-            )}
+              <br></br>
+              <br></br>
+              {emotion && (
+                <Button
+                  onClick={() => handleClick(chosenEmotion)}
+                  variant='outlined'
+                  className='btn'
+                  color={muiTheme(theme)}
+                >
+                  Skip
+                </Button>
+              )}
+            </div>
           </div>
         </div>
         {!emotion && <NavBar />}

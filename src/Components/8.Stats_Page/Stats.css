@@ -1,3 +1,10 @@
 .stats {
   padding-bottom: 80px;
 }
+
+div .graph-container {
+  padding-top: 0;
+  max-width: 40rem;
+  margin: auto;
+  /* align-items: center; */
+}
