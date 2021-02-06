@@ -85,7 +85,7 @@ body {
   max-width: 35rem;
 }
 
-div .container {
+.container {
   padding: 10%;
   /* max-width: 35rem; */
   width: 100%;
@@ -119,9 +119,9 @@ button {
   max-width: 10rem;
 }
 
-img {
+/* img {
   max-width: 7rem;
-}
+} */
 
 .journal-cards {
   max-width: 35rem;

@@ -63,7 +63,7 @@ function Trophy() {
           draggable
           pauseOnHover
         />
-        <div className={'trophycontainer'}>
+        <div className={'trophycontainer trophy-div'}>
           <H1 text={`${userData?.name}'s Trophy Cabinet`} />
           <br></br>
           <Typography variant='h6'>
@@ -72,8 +72,8 @@ function Trophy() {
             <img
               src='https://cdn1.iconfinder.com/data/icons/ninja-things-1/720/ninja-background-512.png'
               alt='ninja'
-              height='15%'
-              width='15%'
+              // height='15%'
+              // width='15%'
               className='center'
             />
             <br></br>

@@ -14,3 +14,12 @@
 .trophy-display {
   padding-bottom: 4em;
 }
+
+img {
+  max-width: 7rem;
+}
+
+.trophy-div {
+  max-width: 50rem;
+  margin: auto;
+}
