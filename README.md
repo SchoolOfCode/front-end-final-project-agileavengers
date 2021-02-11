@@ -6,6 +6,12 @@
 
 ---
 
+## Deployed App [here](https://reflectjournal.netlify.app/) - feel free to check it out 😀
+
+![reflect app screenshots](./reflect.jpeg)
+
+---
+
 ## **Installation and Setup Instructions**
 
 Clone down this repository. You will need node and npm installed globally on your machine.
