@@ -10,14 +10,37 @@
   padding-bottom: 200px;
 }
 
-.container {
+.profile-pic {
+  border-radius: 50%;
+  width: 8em;
+  height: auto;
+  margin: 2em;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* .container {
   padding: 10%;
   width: 85%;
   padding: 0 20px;
   /* border-radius: 20px; */
-  display: flex;
+/* display: flex;
   flex-direction: column;
   align-self: center;
-  margin: 0 10%;
-  /* font-size: 1em; */
+  margin: auto;
+  max-width: 35rem; */
+/* font-size: 1em; */
+/* }  */
+
+.container,
+.profile {
+  padding-top: 0;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container,
+  .profile {
+    padding: 0 3rem;
+  }
 }

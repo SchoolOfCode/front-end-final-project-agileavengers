@@ -28,7 +28,9 @@ function Stats() {
             Display your mood throughout the bootcamp
           </Typography> */}
             <br></br>
-            <Graph />
+            <div className='graph-container'>
+              <Graph />
+            </div>
           </div>
         </div>
         <NavBar />

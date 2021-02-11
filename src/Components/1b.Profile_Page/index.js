@@ -9,7 +9,7 @@ import './Profile.css';
 import { ThemeContext } from '../../ThemeContext';
 import CircularProgressWithLabel from '@material-ui/core/CircularProgress';
 import NavTop from '../NavTop/index.js';
-import {Button} from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 //Backend URL
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
@@ -149,7 +149,9 @@ function Profile() {
                   style={{ textTransform: 'capitalize' }}
                   color={muiTheme(theme)}
                   variant='outlined'
-                >Submit</Button>
+                >
+                  Submit
+                </Button>
               )}
             </div>
           </form>

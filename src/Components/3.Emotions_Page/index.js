@@ -55,7 +55,7 @@ function Emotions() {
           <NavTop />
           <div>
             {!chosenEmotion && (
-              <div>
+              <div className='container center'>
                 <div>
                   <H1 text={`Hi ${userData?.name}!`} />
 

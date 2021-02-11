@@ -8,6 +8,7 @@ import NavBar from '../NavBar/NavBar';
 import NavTop from '../NavTop/index.js';
 import { useHistory } from 'react-router';
 import { Typography } from '@material-ui/core';
+import '../8.Stats_Page/Stats.css';
 
 //Backend URL
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
@@ -180,7 +181,7 @@ function UsersMood() {
         <NavTop />
         <div>
           <H1 text={headingText()} />
-         
+
           <div className='container'>
             <Typography variant='h6'>
               See how your fellow bootcampers rated their moods for a selected
@@ -191,75 +192,75 @@ function UsersMood() {
               handleDate={handleDate}
               label='Select a Date'
             />
-             <div className='pie-legend'>
-          <button
-            style={{
-              backgroundColor: '#F7797D',
-              width: '3em',
-              borderRadius: '30px',
-              border: 0,
-              fontSize: '1.5em',
-              margin: '0.3em',
-              outline: 'none',
-            }}
-          >
-            😢
-          </button>
-          <button
-            style={{
-              backgroundColor: '#7C77B9',
-              width: '3em',
-              borderRadius: '30px',
-              border: 0,
-              fontSize: '1.5em',
-              margin: '0.3em',
-              outline: 'none',
-            }}
-          >
-            😒
-          </button>
-          <button
-            style={{
-              backgroundColor: '#89DAFF',
-              width: '3em',
-              borderRadius: '30px',
-              border: 0,
-              fontSize: '1.5em',
-              margin: '0.3em',
-              outline: 'none',
-            }}
-          >
-            😬
-          </button>
-          <button
-            style={{
-              backgroundColor: '#FBD786',
-              width: '3em',
-              borderRadius: '30px',
-              border: 0,
-              fontSize: '1.5em',
-              margin: '0.3em',
-              outline: 'none',
-            }}
-          >
-            😀
-          </button>
-          <button
-            style={{
-              backgroundColor: '#C6FFDD',
-              width: '3em',
-              borderRadius: '30px',
-              border: 0,
-              fontSize: '1.5em',
-              margin: '0.3em',
-              outline: 'none',
-            }}
-          >
-            😍
-          </button>
-        </div>
+            <div className='pie-legend'>
+              <button
+                style={{
+                  backgroundColor: '#F7797D',
+                  width: '3em',
+                  borderRadius: '30px',
+                  border: 0,
+                  fontSize: '1.5em',
+                  margin: '0.3em',
+                  outline: 'none',
+                }}
+              >
+                😢
+              </button>
+              <button
+                style={{
+                  backgroundColor: '#7C77B9',
+                  width: '3em',
+                  borderRadius: '30px',
+                  border: 0,
+                  fontSize: '1.5em',
+                  margin: '0.3em',
+                  outline: 'none',
+                }}
+              >
+                😒
+              </button>
+              <button
+                style={{
+                  backgroundColor: '#89DAFF',
+                  width: '3em',
+                  borderRadius: '30px',
+                  border: 0,
+                  fontSize: '1.5em',
+                  margin: '0.3em',
+                  outline: 'none',
+                }}
+              >
+                😬
+              </button>
+              <button
+                style={{
+                  backgroundColor: '#FBD786',
+                  width: '3em',
+                  borderRadius: '30px',
+                  border: 0,
+                  fontSize: '1.5em',
+                  margin: '0.3em',
+                  outline: 'none',
+                }}
+              >
+                😀
+              </button>
+              <button
+                style={{
+                  backgroundColor: '#C6FFDD',
+                  width: '3em',
+                  borderRadius: '30px',
+                  border: 0,
+                  fontSize: '1.5em',
+                  margin: '0.3em',
+                  outline: 'none',
+                }}
+              >
+                😍
+              </button>
+            </div>
           </div>
-              {selectedDate && (
+          {selectedDate && (
             <Typography variant='h6'>
               {yourMood
                 ? `Your mood on this date: ${yourMood}`
@@ -267,11 +268,11 @@ function UsersMood() {
             </Typography>
           )}
           <br></br>
-          <div style={{padding: '1em'}}>
-          <canvas
-            ref={chartContainer}
-            style={{ width: '100em', height: '100em' }}
-          />
+          <div className='graph-container' style={{ padding: '1em' }}>
+            <canvas
+              ref={chartContainer}
+              style={{ width: '100em', height: '100em' }}
+            />
           </div>
         </div>
         <NavBar />

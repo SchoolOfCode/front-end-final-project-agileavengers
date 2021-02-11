@@ -4,7 +4,7 @@
 .container {
   padding: 10%;
   width: 85%;
-  padding: 10 10px;
+  padding: 10 20px;
   /* border-radius: 20px; */
   display: flex;
   flex-direction: column;
@@ -19,4 +19,9 @@
 
 fieldset {
   border-color: transparent;
+}
+
+.entry-container {
+  max-width: 35rem;
+  margin: auto;
 }
