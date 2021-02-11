@@ -361,7 +361,6 @@ function JournalView() {
                 audioSource={journalEntry.audio}
                 imgSource={journalEntry.image}
                 vidSource={journalEntry.video}
-                // avatarBackground={themeDark ? '#303030' : '#fafafa'}
                 key={index}
               />
             ))}

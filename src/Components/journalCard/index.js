@@ -21,7 +21,7 @@ import { ThemeContext } from '../../ThemeContext';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: '95%',
+    maxWidth: '100%',
     marginTop: '1em',
     // display: 'contents',
   },
