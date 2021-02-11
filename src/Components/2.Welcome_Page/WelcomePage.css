@@ -9,3 +9,14 @@
   color: #303030;
   padding-bottom: 270px;
 }
+
+.container {
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0 3rem;
+  }
+}

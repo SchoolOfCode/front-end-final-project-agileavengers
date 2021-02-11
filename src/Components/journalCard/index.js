@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useAppContext } from '../../AppContext';
 import ReactAudioPlayer from 'react-audio-player';
 import Linkify from 'react-linkify';
+import './JournalCard.css'
 
 // App Components
 import DeleteButton from '../Buttons/DeleteButton/index.js';
@@ -20,8 +21,12 @@ import { ThemeContext } from '../../ThemeContext';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    maxWidth: '100%',
     marginTop: '1em',
+    // display: 'contents',
+  },
+  card:{
+    display: 'contents',
   },
   date: {
     maxWidth: '95%',
@@ -55,9 +60,6 @@ const useStyles = makeStyles((theme) => ({
     justify: 'space-between',
     spacing: 3,
   },
-  // avatar: {
-  //   width: '100%',
-  // },
 }));
 
 export default function JournalCard({
@@ -96,94 +98,179 @@ export default function JournalCard({
 
   return (
     <div>
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia>
-            <div className={classes.root}>
-              <div classname='journal-image' className={classes.media}>
-                {imgSource && (
-                  <img
-                    classname='journal-image'
-                    src={imgSource}
-                    alt='chosenImg'
-                    style={{ width: '100%' }}
-                  />
-                )}
-              </div>
-
-              <div classname='journal-video' className={classes.media}>
-                {vidSource && (
-                  <video
-                    src={vidSource}
-                    alt='chosenVideo'
-                    style={{ width: '100%' }}
-                    controls
-                  />
-                )}
-              </div>
-
-              <div classname='journal-audio' className={classes.media}>
-                {audioSource && (
-                  <ReactAudioPlayer
-                    src={audioSource}
-                    alt='chosenAudio'
-                    style={{ width: '100%' }}
-                    autoplay
-                    controls
-                  />
-                )}
-              </div>
-            </div>
-          </CardMedia>
-          <CardContent>
-            <Grid>
-              <p>{date}</p>
-              {/* <Typography gutterBottom variant='h6' component='h6'>
-                {date}
-              </Typography> */}
-              {emotionNumber && (
-                <p
-                  id={theme}
-                  style={{
-                    fontSize: '3em',
-                    strokeOpacity: '0',
-                    backgroundColor: 'transparent',
-                  }}
-                  class='journal-mood'
-                >
-                  {emotion[0].emotion}
-                </p>
-              )}
-            </Grid>
-            <Typography variant='h6' component='h6' className='journaltext'>
-              <Linkify
-                componentDecorator={(decoratedHref, decoratedText, key) => (
-                  <a target='blank' href={decoratedHref} key={key}>
-                    {decoratedText}
-                  </a>
-                )}
-              >
-                {text}
-              </Linkify>
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Grid className={classes.journalactions}>
-            <FavoriteButton
-              className={classes.journalactionsicons}
-              handleFavorite={handleFavorite}
-              journalEntryId={journalEntryId}
-              favorite={favorite}
+<Card className={classes.root}>
+  <CardActionArea>
+    <CardMedia>
+      <div className={classes.card}>
+        <div classname='journal-image' className={classes.media}>
+          {imgSource && (
+            <img
+              classname='journal-image'
+              src={imgSource}
+              alt='chosenImg'
+              style={{ width: '100%' }}
             />
-            <DeleteButton
-              className={classes.journalactionsicons}
-              handleDelete={handleDelete}
-              journalEntryId={journalEntryId}
+          )}
+        </div>
+
+        <div classname='journal-video' className={classes.media}>
+          {vidSource && (
+            <video
+              src={vidSource}
+              alt='chosenVideo'
+              style={{ width: '100%' }}
+              controls
             />
-          </Grid>
-        </CardActions>
-      </Card>
-    </div>
+          )}
+        </div>
+
+        <div classname='journal-audio' className={classes.media}>
+          {audioSource && (
+            <ReactAudioPlayer
+              src={audioSource}
+              alt='chosenAudio'
+              style={{ width: '100%' }}
+              autoplay
+              controls
+            />
+          )}
+        </div>
+      </div>
+    </CardMedia>
+    <CardContent>
+      <Grid>
+        <p>{date}</p>
+        {emotionNumber && (
+           <p
+             id={theme}
+             style={{
+               fontSize: '3em',
+               strokeOpacity: '0',
+               backgroundColor: 'transparent',
+             }}
+             class='journal-mood'
+           >
+             {emotion[0].emotion}
+           </p>
+         )}
+       </Grid>
+       <Typography variant='h6' component='h6' className='journaltext'>
+         <Linkify
+           componentDecorator={(decoratedHref, decoratedText, key) => (
+             <a target='blank' href={decoratedHref} key={key}>
+               {decoratedText}
+             </a>
+           )}
+         >
+           {text}
+         </Linkify>
+       </Typography>
+     </CardContent>
+   </CardActionArea>
+   <CardActions>
+     <Grid className={classes.journalactions}>
+       <FavoriteButton
+         className={classes.journalactionsicons}
+         handleFavorite={handleFavorite}
+         journalEntryId={journalEntryId}
+         favorite={favorite}
+       />
+       <DeleteButton
+         className={classes.journalactionsicons}
+         handleDelete={handleDelete}
+         journalEntryId={journalEntryId}
+       />
+     </Grid>
+   </CardActions>
+ </Card>
+ </div>
   );
 }
+
+{/* <div>
+<Card className={classes.root}>
+  <CardActionArea>
+    <CardMedia>
+      <div className='{classes.root}'>
+        <div classname='journal-image' className={classes.media}>
+          {imgSource && (
+            <img
+              classname='journal-image'
+              src={imgSource}
+              alt='chosenImg'
+              style={{ width: '100%' }}
+            />
+          )}
+        </div>
+
+        <div classname='journal-video' className={classes.media}>
+          {vidSource && (
+            <video
+              src={vidSource}
+              alt='chosenVideo'
+              style={{ width: '100%' }}
+              controls
+            />
+          )}
+        </div>
+
+        <div classname='journal-audio' className={classes.media}>
+          {audioSource && (
+            <ReactAudioPlayer
+              src={audioSource}
+              alt='chosenAudio'
+              style={{ width: '100%' }}
+              autoplay
+              controls
+            />
+          )}
+        </div>
+      </div>
+    </CardMedia>
+    <CardContent>
+      <Grid>
+        <p>{date}</p>
+        {emotionNumber && (
+           <p
+             id={theme}
+             style={{
+               fontSize: '3em',
+               strokeOpacity: '0',
+               backgroundColor: 'transparent',
+             }}
+             class='journal-mood'
+           >
+             {emotion[0].emotion}
+           </p>
+         )}
+       </Grid>
+       <Typography variant='h6' component='h6' className='journaltext'>
+         <Linkify
+           componentDecorator={(decoratedHref, decoratedText, key) => (
+             <a target='blank' href={decoratedHref} key={key}>
+               {decoratedText}
+             </a>
+           )}
+         >
+           {text}
+         </Linkify>
+       </Typography>
+     </CardContent>
+   </CardActionArea>
+   <CardActions>
+     <Grid className={classes.journalactions}>
+       <FavoriteButton
+         className={classes.journalactionsicons}
+         handleFavorite={handleFavorite}
+         journalEntryId={journalEntryId}
+         favorite={favorite}
+       />
+       <DeleteButton
+         className={classes.journalactionsicons}
+         handleDelete={handleDelete}
+         journalEntryId={journalEntryId}
+       />
+     </Grid>
+   </CardActions>
+ </Card>
+ </div> */}

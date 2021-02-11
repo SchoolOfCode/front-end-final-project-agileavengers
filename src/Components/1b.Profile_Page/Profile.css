@@ -10,7 +10,21 @@
 
 .profile-pic-css {
   border-radius: 50%;
-  width: 8em;
+  width: 7em;
   height: auto;
   margin: 2em;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container,
+.profile {
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container,
+  .profile {
+    padding: 0 3rem;
+  }
 }

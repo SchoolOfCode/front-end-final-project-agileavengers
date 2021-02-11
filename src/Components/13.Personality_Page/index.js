@@ -27,13 +27,15 @@ export default function Personalities() {
             paddingLeft: '2em',
           }}
         >
-          <H1 text='Myers-Briggs' />
-          <Typography variant='h6'>
-            Find out what different personality types are like to work with.
-          </Typography>
-          {personalities.map((personality) => (
-            <PersonalityDisplay personality={personality} />
-          ))}
+          <div className='container'>
+            <H1 text='Myers-Briggs' />
+            <Typography variant='h6'>
+              Find out what different personality types are like to work with.
+            </Typography>
+            {personalities.map((personality) => (
+              <PersonalityDisplay personality={personality} />
+            ))}
+          </div>
         </div>
         <NavBar />
       </div>

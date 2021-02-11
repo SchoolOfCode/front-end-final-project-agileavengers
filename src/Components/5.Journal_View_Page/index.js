@@ -323,7 +323,7 @@ function JournalView() {
             <MenuItem value={'Mood low to high'}>Mood: 😢 to 😍</MenuItem>
           </Select>
         </FormControl>
-        <div className='jouranal-cards'>
+        <div className='journal-cards'>
           {journalDisplay
             .filter((x) => !showFavorites || x.favorite === true)
             .sort((a, b) => {
@@ -361,7 +361,6 @@ function JournalView() {
                 audioSource={journalEntry.audio}
                 imgSource={journalEntry.image}
                 vidSource={journalEntry.video}
-                // avatarBackground={themeDark ? '#303030' : '#fafafa'}
                 key={index}
               />
             ))}
