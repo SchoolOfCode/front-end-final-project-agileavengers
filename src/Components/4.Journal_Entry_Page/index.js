@@ -265,9 +265,9 @@ export default function JournalEntry({ emotion }) {
                   value={imgUpload}
                 />
                 <label htmlFor={'image'}>
-                  {/* <button style={{padding: '0.7em'}}> */}
+                  <span style={{padding: '0.7em'}}>
                   <PhotoRoundedIcon fontSize='large' />
-                  {/* </button> */}
+                  </span>
                 </label>
                 <input
                   id='video'
@@ -279,9 +279,9 @@ export default function JournalEntry({ emotion }) {
                   style={{ display: 'none', overFlow: 'hidden' }}
                 />
                 <label htmlFor={'video'}>
-                  {/* <button style={{padding: '0.7em'}}> */}
+                  <span style={{padding: '0.7em'}} >
                   <VideocamRoundedIcon fontSize='large' />
-                  {/* </button> */}
+                  </span>
                 </label>
                 <input
                   id='audio'
@@ -293,9 +293,9 @@ export default function JournalEntry({ emotion }) {
                   style={{ display: 'none', overFlow: 'hidden' }}
                 />
                 <label htmlFor={'audio'}>
-                  {/* <button style={{padding: '0.7em'}}> */}
+                  <span style={{padding: '0.7em'}} >
                   <AudiotrackRoundedIcon fontSize='large' />
-                  {/* </button> */}
+                  </span>
                 </label>
               </div>
             </div>
